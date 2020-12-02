@@ -7,12 +7,13 @@ int main()
 {   
     printf("Genislik Giriniz: ");
     scanf("%d",&len);
-    while (len < 12)
+    if (len == 0 || len < 12)
     {
         printf("Genislik Sayi Olup 11 den Buyuk olmali");
-        printf("\nTekrar Giriniz:");
-        scanf("%d",&len);
-    }
+        printf("\nYeniden Baslatin!!!");
+        getch();
+        exit(0);  
+    }  
     if (len % 2 == 0)
     {
         mod=2;
